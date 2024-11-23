@@ -59,7 +59,8 @@ a:hover {
 
 .middle h1 {
   text-align: right;
-  max-width: 600px;
+  max-width: 100%;
+  max-height: 500px;
   font-size: 3vw;
   background: linear-gradient(to right, #1e2a47, #3a4a6a, #607d8b, #37474f);
   background-clip: text;
