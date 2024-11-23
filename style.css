@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-image: url(./assets/DSC00186.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 70px;
+    gap: 2rem;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .logo {
+    margin: 0;
+    width: 40%;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+  }
+  
+  a:hover {
+    color: grey;
+  }
+  
+  .middle {
+    border: 2px solid red;
+    display: flex;
+    justify-content: flex-end;
+    height: 300px;
+    align-items: center;
+    padding-right: 50px;
+  }
+  
+  .middle h1 {
+    text-align: right;
+    max-width: 600px;
+  }
+  
+  
