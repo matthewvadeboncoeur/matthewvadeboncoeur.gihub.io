@@ -1,77 +1,75 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 .container {
   display: grid;
-  grid-template-areas: "nav nav"
-  "left_side right_side";
+  grid-template-areas:
+    "nav nav"
+    "left_side right_side";
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   height: 100vh;
 }
 
-
-
 .nav {
-    grid-area: nav;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 70px;
-    gap: 2rem;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .logo {
-    margin: 0;
-    width: 40%;
-  }
-  
-  .logo img {
-    max-width: 100%;
-    min-width: 200px;
-    height: auto;
-    display: block;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    color: inherit;
-    padding: 0.5rem 1rem;
-    font-size: clamp(1rem, 2vw, 2.5rem);
-  }
-  
-  a:hover {
-    color: grey;
-  }
+  grid-area: nav;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 70px;
+  gap: 2rem;
+  justify-content: space-around;
+  padding: 20px;
+}
 
-  .left {
-    grid-area: left_side;
-    background-color: #aab1e3;
-    margin-left: 10px;
-    margin-bottom: 10px
-  }
+.logo {
+  margin: 0;
+  width: 40%;
+}
 
-  .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    grid-area: right_side;
-    background-color: #606691;
-    margin-right: 10px;
-    margin-bottom: 10px
-  }
+.logo img {
+  max-width: 100%;
+  min-width: 200px;
+  height: auto;
+  display: block;
+}
 
-  .right img {
-    max-width: 90%;
-    max-height: 90%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-  }
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 1rem;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+a:hover {
+  color: grey;
+}
+
+.left {
+  grid-area: left_side;
+  background-color: #aab1e3;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  grid-area: right_side;
+  background-color: #606691;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.right img {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
