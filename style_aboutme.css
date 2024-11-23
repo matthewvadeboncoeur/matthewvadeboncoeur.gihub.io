@@ -3,14 +3,28 @@
     padding: 0;
 }
 
+
+.container {
+  display: grid;
+  grid-template-areas: "nav nav"
+  "left_side right_side";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  height: 100vh;
+}
+
+
+
 .nav {
+    grid-area: nav;
     display: flex;
     width: 100%;
     align-items: center;
     height: 70px;
     gap: 2rem;
     justify-content: space-around;
-    padding: 10px;
+    padding: 20px;
   }
   
   .logo {
@@ -20,6 +34,7 @@
   
   .logo img {
     max-width: 100%;
+    min-width: 200px;
     height: auto;
     display: block;
   }
@@ -33,4 +48,30 @@
   
   a:hover {
     color: grey;
+  }
+
+  .left {
+    grid-area: left_side;
+    background-color: #aab1e3;
+    margin-left: 10px;
+    margin-bottom: 10px
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    grid-area: right_side;
+    background-color: #606691;
+    margin-right: 10px;
+    margin-bottom: 10px
+  }
+
+  .right img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
