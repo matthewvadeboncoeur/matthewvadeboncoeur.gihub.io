@@ -28,7 +28,6 @@ body {
 
 .logo {
   width: 40%;
-  min-width: 400px;
 }
 
 .logo img {
@@ -87,7 +86,7 @@ a:hover {
   text-align: right;
   max-width: 40%;
   max-height: 100%;
-  font-size: 3rem;
+  font-size: min(60px, 3vw);
   background: linear-gradient(to left, #1e2a47, #3a4a6a, #607d8b, #37474f);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -95,6 +94,10 @@ a:hover {
 
 
 @media screen and (max-width: 925px) {
+
+  .logo {
+    width: 65%;
+  }
 
   .middle h1 {
     margin-top: 40px;
