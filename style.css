@@ -21,15 +21,14 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
-  height: 70px;
+  height: auto;
   gap: 2rem;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: space-between;
 }
 
 .logo {
-  margin: 0;
   width: 40%;
+  min-width: 400px;
 }
 
 .logo img {
@@ -37,14 +36,39 @@ body {
   min-width: 200px;
   height: auto;
   display: block;
+  padding: 20px 20px
 }
 
-.nav a {
+.myLinks a {
   text-decoration: none;
   color: inherit;
   padding: 0.5rem 1rem;
-  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-size: 2.5vw;
   transition: color 0.4s ease;
+}
+
+.myLinks {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #000;
+  transition: transform 0.3s ease;
 }
 
 a:hover {
@@ -56,15 +80,49 @@ a:hover {
   justify-content: flex-end;
   height: auto;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 40px;
 }
 
 .middle h1 {
   text-align: right;
-  max-width: 45%;
+  max-width: 40%;
   max-height: 100%;
-  font-size: min(3vw, 60px);
+  font-size: 3rem;
   background: linear-gradient(to left, #1e2a47, #3a4a6a, #607d8b, #37474f);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (max-width: 925px) {
+
+  .middle h1 {
+    margin-top: 40px;
+    font-size: 4vw;
+  }
+
+  .middle {
+    padding-right: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-right: 30px;
+  }
+
+  .myLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 5px
+  }
+
+  .myLinks.show {
+    display: flex;
+  }
 }
